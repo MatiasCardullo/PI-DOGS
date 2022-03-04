@@ -15,7 +15,7 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <div className='title'>
-                    <h1>Proyecto Dogs 🐶</h1>
+                    <h1>Proyecto Dogs 🐶 Matias Cardullo</h1>
                 </div>
             </div>
         </StyledNav>

@@ -14,7 +14,6 @@ function CreateBreed() {
     const [temps, setTemps] = useState([]);
     const [selectedTemp, setSelectedTemp] = useState('');
     const [input, setInput] = useState({
-
         temperaments: [],
         name: '',
         weight: '',
@@ -33,7 +32,6 @@ function CreateBreed() {
     }, [])
 
     const handleChange = (ev) => {
-
         setInput({
             ...input,
             [ev.target.name]: ev.target.value,
@@ -108,10 +106,8 @@ function CreateBreed() {
             <CreateBreedModal setShowModal={setShowModal} showModal={showModal} />
             <div className='img-container'></div>
             <div className='form'>
-
                 <h1>Crear raza:</h1>
                 <form className='form-top' id='form-top' onSubmit={handleSubmit}>
-
                     <input
                         required
                         name='name'
@@ -160,13 +156,9 @@ function CreateBreed() {
                             ))
                         }
                     </div>
-
                     <input className='submit' type="submit" value='Crear' />
-
                 </form>
             </div>
-
-
         </StyledCreateBreed>
     )
 

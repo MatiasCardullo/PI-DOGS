@@ -10,9 +10,9 @@ export const StyledHome = styled.div`
     }
 
     .cards{
-        width: 80%;
+        align-items: flex-start; 
+        width: 100%;
         padding-top: 20px;
-        margin-right: 20%;
     }
 
     .filtro{

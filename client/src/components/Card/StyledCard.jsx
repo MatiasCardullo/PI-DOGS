@@ -3,17 +3,16 @@ import styled from 'styled-components';
 export const StyledCard = styled.div`
     margin: 30px;
     display: flex;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     width: 500px;
     height: 250px;
-    background-color: #afcbf3
 
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.4);
     cursor: pointer;
     transition: transform 250ms ease;
     &:hover{
-        transform: scale(1.02);
+        transform: scale(1.05);
     }
 
     .contImg{
@@ -68,13 +67,13 @@ export const StyledCard = styled.div`
             padding: 0 15px;
             width: 100%;
             h2{
-                font-size: 30px;
+                font-size: 50px;
             }
             h5{
                 font-size: 17px;
             }
             p{
-                font-size: 19px;
+                font-size: 17px;
             }
         }
         

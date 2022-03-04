@@ -24,6 +24,7 @@ export const StyledModal = styled(motion.div)`
 
         h1{
             font-size: 60px;
+            text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
         }
 
         .info{
@@ -33,6 +34,7 @@ export const StyledModal = styled(motion.div)`
             p{
                 margin: 10px 35px;
                 font-size: 30px;
+                text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
                 font-weight: bold;
                 .fas{
                     margin-right: 15px;
@@ -53,6 +55,7 @@ export const StyledModal = styled(motion.div)`
             .temp-title{
                 font-size: 30px;
                 font-weight: bold;
+                text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
             }
             div{
                 display: flex;
@@ -63,7 +66,7 @@ export const StyledModal = styled(motion.div)`
                     background-color: var(--color);
                     color: black;
                     padding: 5px 10px;
-                    border-radius: 10px;
+                    border-radius: 20px;
                     font-size: 20px;
 
                 }
@@ -72,19 +75,19 @@ export const StyledModal = styled(motion.div)`
 
         button{
             i{
-                font-size: 25px;
+                font-size: 10px;
                 color: black;
             }
             position: absolute;
-            top: -20px;
-            right: -20px;
-            width: 45px;
-            height: 45px;
+            top: -10px;
+            right: -10px;
+            width: 30px;
+            height: 30px;
             border: none;
             border-radius: 50%;
             border: 2px solid black;
 
-            background-color: #ffffff;
+            background-color: #ff4040;
             cursor: pointer;
         }
     }
