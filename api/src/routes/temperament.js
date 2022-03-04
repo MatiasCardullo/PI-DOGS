@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
         let query = await Temperament.findAll({
             order: [['name', 'asc']]
         });
-        if (query) 
+        if (query)
             res.json(query);
         else
             res.json('Not found');

@@ -18,18 +18,21 @@
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const axios = require('axios');
+
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
+// const { Dog } = require('./src/db.js');
 const { Temperament, Dog } = require('./src/db.js');
 
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
+
   let tempsObj = {};
   axios.get(`https://api.thedogapi.com/v1/breeds`)
     .then(response => {
       response.data?.forEach(breed => {
-        let temps = breed.temperament?.split(', '); // ["Alert", "Calm", "Intelligent"]
+        let temps = breed.temperament?.split(', ');
         temps?.forEach(t => {
 
           Temperament.findOrCreate({ where: { name: t } })
@@ -45,7 +48,6 @@ conn.sync({ force: true }).then(() => {
       })
 
     })
-    .then(() => console.log('temperaments created'))
     .then(() => {
       axios.get('https://api.thedogapi.com/v1/breeds')
         .then((response) => {
@@ -62,7 +64,7 @@ conn.sync({ force: true }).then(() => {
                 b.addTemperament(tempsObj[b.dataValues.apiId]);
               })
             })
-            .then(() => console.log('breeds created'))
+            .then(() => console.log('it works'))
         })
     })
     .catch(err => console.error(err));
@@ -72,4 +74,5 @@ conn.sync({ force: true }).then(() => {
   server.listen(3001, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
-});
+})
+
