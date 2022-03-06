@@ -12,7 +12,7 @@ ul{
         text-decoration: none;
         color: black;
         padding: 10px 15px;
-        border-radius: 5px;
+        border-radius: 20px;
     }
     a:hover{
         background-color: var(--color);

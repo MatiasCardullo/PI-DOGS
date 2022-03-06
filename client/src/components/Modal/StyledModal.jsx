@@ -5,7 +5,7 @@ export const StyledModal = styled(motion.div)`
     background-color: #c0ddc6;
     max-width: 800px;
     min-height: 500px;
-    border-radius: 20px;
+    border-radius: 100px;
     width: 90%;
     background-image: url(${(props) => props.image});
     background-size: cover; 
