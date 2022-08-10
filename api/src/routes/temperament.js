@@ -3,7 +3,6 @@ require('dotenv').config();
 const { Router } = require('express');
 const router = Router();
 
-const { API_KEY } = process.env;
 const { Temperament } = require('../db.js');
 
 router.get('/', async (req, res) => {

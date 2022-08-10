@@ -1,7 +1,6 @@
 require('dotenv').config();
 const { Router } = require('express');
 const router = Router();
-const { API_KEY } = process.env;
 const { Dog, Temperament, breed_temp } = require('../db.js');
 const { Op } = require("sequelize");
 
