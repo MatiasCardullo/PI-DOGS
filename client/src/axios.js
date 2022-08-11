@@ -1,9 +1,11 @@
 import axios from 'axios';
 import dotenv from 'dotenv';
+import {URLHOST} from process.env
+
 dotenv.config();
 
 const instance = axios.create({
-    baseURL: "http://localhost:3001"
+    baseURL: URLHOST
 });
 
 export default instance;
