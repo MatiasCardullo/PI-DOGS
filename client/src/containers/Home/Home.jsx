@@ -26,7 +26,7 @@ function Home(props) {
     const pagesVisited = pageNumber * breedsPerPage;
 
     function renderCards(array) {
-
+        console.log(array)
         if (array.length === 0)
             return
         let filtered = array?.filter(b => b.name.toLowerCase().includes(title.toLocaleLowerCase()));
