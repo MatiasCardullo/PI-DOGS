@@ -19,7 +19,7 @@ function Filtro({ setShowNoResult }) {
 
     useEffect(() => {
         async function getTemps() {
-            let t = (await axios.get('/temperament')).data.map(temp => temp.name);
+            let t = (await axios.get('/temperament')).data?.map(temp => temp.name);
             setTemps(t)
         }
         getTemps();

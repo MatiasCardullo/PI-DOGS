@@ -29,7 +29,7 @@ function Home(props) {
 
         if (array.length === 0)
             return
-        let filtered = array.filter(b => b.name.toLowerCase().includes(title.toLocaleLowerCase()));
+        let filtered = array?.filter(b => b.name.toLowerCase().includes(title.toLocaleLowerCase()));
 
         const displayBreeds = filtered.slice(pagesVisited, pagesVisited + breedsPerPage);
         const pageCount = Math.ceil(filtered.length / breedsPerPage);
